@@ -13,7 +13,7 @@ function deleteArray() {
 function checkArray() {
     let indices = [];
     let elementToCheck = prompt("Введите элемент для проверки")
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i] === elementToCheck) {
             indices.push(i);
         }
@@ -21,6 +21,7 @@ function checkArray() {
     if (indices.length) {
         alert("элементы нахожятся под индексами: " + indices);
     } else {
-        alert("такого элемента нет");
+        array.push(elementToCheck);
+        alert(elementToCheck + " добавлен");
     }
 }
